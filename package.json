@@ -3,12 +3,22 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.11.3",
+    "@material-ui/icons": "^4.11.2",
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.8.3",
+    "bootstrap": "^4.6.0",
+    "mdb-ui-kit": "^3.4.0",
     "react": "^17.0.2",
+    "react-bootstrap": "^1.5.2",
+    "react-bootstrap-star-rating": "^3.5.5-alpha.0.3",
     "react-dom": "^17.0.2",
+    "react-modal": "^3.12.1",
+    "react-rating-stars-component": "^2.2.0",
     "react-scripts": "4.0.3",
+    "react-stars": "^2.2.5",
+    "uuid": "^8.3.2",
     "web-vitals": "^1.1.1"
   },
   "scripts": {

@@ -38,6 +38,7 @@ const Add = ({addMovie}) => {
         title:"",
         description:"",
         fl:"",
+        url:"",
         rate:1
     })
     const change=(e)=> 
@@ -51,7 +52,9 @@ const save = () => {
         title:"",
         description:"",
         fl:"",
-        rate:1
+        
+        rate:1,
+        url:""
     })
     closeModal()
 }
@@ -73,6 +76,12 @@ const save = () => {
               <input type='text' name='title'   onChange={change} />
               
               <br/>
+
+              <label  style={{marginRight: 10}}>url</label>
+
+              <input type='text' name='url'   onChange={change} />
+
+            <br/>
 
 
               <label style={{marginRight: 10}}>Description</label>

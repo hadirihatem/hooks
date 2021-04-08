@@ -1,11 +1,12 @@
 
-import react,{useState} from 'react' ;
+import react,{useState } from 'react' ;
 import {Navbar, Nav , Button , FormControl} from 'react-bootstrap'
 import Form from 'react-bootstrap/Form'
 import 'bootstrap/dist/css/bootstrap.min.css';
-//import Rem from './Rem.js';
+import {Link} from 'react-router-dom'
+
  import Add from './Add.js'
-import Filter from './Filter.js';
+
 import ReactStars from 'react-stars'
 
 
@@ -20,29 +21,22 @@ const Navbaar = ({setSearchTerm,addMovie,setRateSearch}) => {
     setsearch(e.target.value);
   }
   
-
-  
- 
-    
-
   return (
     <div>
       <Navbar bg="dark" variant="dark">
      
     <Nav className="mr-auto">
-      <Nav.Link href="#home">Home</Nav.Link>
-      <Nav.Link href="#features">Moviecart</Nav.Link>
-      <Nav.Link href="#pricing">Movielist</Nav.Link>
+      <Link to="/">Home</Link>
+      <Link to="/Moviecart">Moviecart</Link>
+      
     
 
       <Add addMovie={addMovie}/>
-       <Filter setSearchTerm={setSearchTerm} /> 
+      
 
    
     </Nav>
 
-
- 
  
     { <Form inline>
 

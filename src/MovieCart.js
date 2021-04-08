@@ -11,6 +11,7 @@ import Typography from '@material-ui/core/Typography';
 import { red } from '@material-ui/core/colors';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import './App.css';
+import {Link} from 'react-router-dom'
 
 
 
@@ -41,32 +42,31 @@ const useStyles = makeStyles((theme) => ({
   }));
 
 
-    export default function MovieCart({movies}) {
+    export default function MovieCart({movie}) {
         const classes = useStyles();
         
-      
         return (
+        <Link to={`/${movie.id}`} >
          <div className='App-header'>
-             
          <Card className={classes.root}>
             <CardHeader
               avatar={
                 <Avatar aria-label="recipe" className={classes.avatar}>
-                  {movies.fl}
+                  {movie.fl}
                 </Avatar>
               }
              
-              title={movies.title}
+              title={movie.title}
             
             />
             <CardMedia
               className={classes.media}
-              image={movies.image}
+              image={movie.image}
               
             />
             <CardContent>
               <Typography variant="body2" color="textSecondary" component="p">
-                {movies.description}
+                {movie.description}
               </Typography>
             </CardContent>
             <CardActions disableSpacing>
@@ -81,7 +81,7 @@ const useStyles = makeStyles((theme) => ({
     count={5}
    
     size={24}
-    value={movies.rate}
+    value={movie.rate}
     edit={false}
    
     emptyIcon={<i className="far fa-star"></i>}
@@ -94,6 +94,7 @@ const useStyles = makeStyles((theme) => ({
 
 
   </div>
+  </Link>
           
           
 
